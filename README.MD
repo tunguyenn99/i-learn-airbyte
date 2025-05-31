@@ -5,6 +5,8 @@ This repository documents my journey in exploring [Airbyte](https://airbyte.com)
 - Testing the **Faker** source connector.
 - Creating a custom HTTP API connection to fetch data from the [Simpsons API](https://sampleapis.com/api-list/simpsons).
 
+[Connection Output](./images/connection.png)
+
 ---
 
 ## 🔧 Project Setup
