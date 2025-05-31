@@ -110,7 +110,11 @@ The goal is to fetch character data from the Simpsons API and load it into a des
 i-learn-airbyte/
 ├── images/
 │   ├── connection.png
-│   └── result.png
+│   ├── faker_result.png
+│   ├── faker_setup.png
+│   ├── simpson_result.png
+│   ├── simpson_setup.png
+├── Airbyte Certificate.pdf
 ├── README.md
 └── ...
 ```
