@@ -55,11 +55,11 @@ The Faker connector generates synthetic data, useful for testing and development
 
 - **Connection Setup:**
 
-  ![Connection Setup](./images/connection.png)
+  ![Connection Setup](./images/faker_setup.png)
 
 - **Sync Result:**
 
-  ![Sync Result](./images/result.png)
+  ![Sync Result](./images/faker_result.png)
 
 ---
 
@@ -88,6 +88,17 @@ The goal is to fetch character data from the Simpsons API and load it into a des
 
    - Monitor the sync process.
    - Validate the data in your destination.
+
+
+### Screenshots:
+
+- **Connection Setup:**
+
+  ![Connection Setup](./images/simpson_setup.png)
+
+- **Sync Result:**
+
+  ![Sync Result](./images/simpson_result.png)
 
 ---
 
