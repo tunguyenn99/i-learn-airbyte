@@ -1,33 +1,117 @@
-# Airbyte - Open Source Data Integration Platform
+# 🚀 Airbyte Self-Learning Project
 
-Airbyte is an open-source platform that helps synchronize data from various sources (such as APIs, databases, CSV files, etc.) to destinations like data warehouses, data lakes, or analytics tools. With flexible scalability and a strong community, Airbyte is a leading choice for building modern data pipelines.
+This repository documents my journey in exploring [Airbyte](https://airbyte.com), an open-source data integration platform. The project includes:
 
-## Key Features
+- Testing the **Faker** source connector.
+- Creating a custom HTTP API connection to fetch data from the [Simpsons API](https://sampleapis.com/api-list/simpsons).
 
-- Over 300 connectors for extracting and loading data
-- Support for custom connectors tailored to specific needs
-- Intuitive and user-friendly interface
-- Support for scheduled or real-time sync
-- Easy integration with BI tools and data warehouses like BigQuery, Snowflake, Redshift, PostgreSQL, and more
+---
 
-## Architecture
+## 🔧 Project Setup
 
-Airbyte operates on an ELT (Extract - Load - Transform) model. Data is extracted from sources, loaded into destinations, and can then be transformed using tools like dbt, Spark, or manual SQL.
+### Prerequisites
 
-## Common Use Cases
+- Docker installed and running.
+- Airbyte deployed locally or via Docker Compose.
+- Basic understanding of data integration concepts.
 
-- Connecting marketing data (Facebook Ads, Google Ads) to BigQuery
-- Migrating data from ERP or CRM systems into data lakes
-- Building automated pipelines for analytics and reporting
+### Installation
 
-## Completion Certificate
+1. **Clone the repository:**
 
-Here is a sample certificate:
+   ```bash
+   git clone https://github.com/tunguyenn99/i-learn-airbyte.git
+   cd i-learn-airbyte
+   ```
 
-<img src="https://cdn.filestackcontent.com/U1J55hKwQOeCsRkg4OCB?policy=eyJjYWxsIjpbInJlYWQiXSwiZXhwaXJ5IjoxNzQ4NzE2NTAyLCJwYXRoIjoiLyJ9&signature=5914e406405415b30c5adf866ff38e4babc5663e203462eb6afa67fc89cf913f" />
+2. **Start Airbyte:**
 
-## Resources
+   Follow the [Airbyte Quickstart Guide](https://docs.airbyte.com/quickstart/deploy-airbyte/) to deploy Airbyte locally.
 
-Official Website: https://airbyte.com  
-Documentation: https://docs.airbyte.com  
-GitHub: https://github.com/airbytehq/airbyte
+---
+
+## 🧲 Testing the Faker Connector
+
+The Faker connector generates synthetic data, useful for testing and development purposes.
+
+### Steps:
+
+1. **Create a new connection:**
+
+   - **Source:** Faker
+   - **Destination:** Your preferred destination (e.g., Local JSON, PostgreSQL)
+
+2. **Configure the source:**
+
+   - Set the number of records to generate.
+   - Choose the data schema (e.g., users, products).
+
+3. **Run the sync:**
+
+   - Monitor the sync process via the Airbyte UI.
+   - Verify the data in your destination.
+
+### Screenshots:
+
+- **Connection Setup:**
+
+  ![Connection Setup](./images/connection.png)
+
+- **Sync Result:**
+
+  ![Sync Result](./images/result.png)
+
+---
+
+## 🌐 Integrating the Simpsons API
+
+The goal is to fetch character data from the Simpsons API and load it into a destination.
+
+### API Endpoint:
+
+- `https://sampleapis.com/api-list/simpsons`
+
+### Steps:
+
+1. **Create a new HTTP API source:**
+
+   - **Source Name:** Simpsons API
+   - **URL:** `https://sampleapis.com/api-list/simpsons`
+   - **HTTP Method:** GET
+   - **Authentication:** None (if the API is public)
+
+2. **Configure the destination:**
+
+   - Choose your preferred destination connector.
+
+3. **Run the sync:**
+
+   - Monitor the sync process.
+   - Validate the data in your destination.
+
+---
+
+## 📁 Project Structure
+
+```
+i-learn-airbyte/
+├── images/
+│   ├── connection.png
+│   └── result.png
+├── README.md
+└── ...
+```
+
+---
+
+## 📚 Resources
+
+- [Airbyte Documentation](https://docs.airbyte.com)
+- [Faker Connector Guide](https://docs.airbyte.com/integrations/sources/faker)
+- [Creating HTTP API Sources](https://docs.airbyte.com/integrations/sources/http)
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
