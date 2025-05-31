@@ -125,7 +125,7 @@ i-learn-airbyte/
 
 - [Airbyte Documentation](https://docs.airbyte.com)
 - [Faker Connector Guide](https://docs.airbyte.com/integrations/sources/faker)
-- [Creating HTTP API Sources](https://docs.airbyte.com/integrations/sources/http)
+- [Creating Custom Connectors](https://docs.airbyte.com/integrations/custom-connectors)
 
 ---
 
